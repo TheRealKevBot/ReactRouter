@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect, Route, Switch } from 'react-router-dom';
 
 import Home from '../Pages/Home'
 import Blogs from '../Pages/Blog'
@@ -10,10 +11,21 @@ export default class Main extends Component {
     render() {
         return (
             <div className='main'>
-                <Home />
-                <Blogs />
-                <News />
-                <Favorites />
+                <Switch>
+                    <Route exact path='/'>
+                        <Home />
+                    </Route>
+                    <Route path='/Blogs'>
+                        <Blogs />
+                    </Route>
+                    <Route path='/News'>
+                        <News />
+                    </Route>
+                    <Route path='/Favorites'>
+                        <Favorites />
+                    </Route>
+                </Switch>
+                <Redirect path='/' />
             </div>
         )
     }
