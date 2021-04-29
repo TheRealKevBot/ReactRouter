@@ -1,4 +1,30 @@
 .App {
-  text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
+.navbar-links {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: steelblue;
+  margin: 0rem;
+  padding-right: 2rem;
+  padding-bottom: .75rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24pt;
+  cursor: pointer;
+}
+
+.navlinks:hover {
+  color: white;
+}
+
+.link, .link:hover, .link:active, .link:visited, .link:focus {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  text-align: center;
+} 
